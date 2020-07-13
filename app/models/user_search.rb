@@ -1,10 +1,10 @@
-class UserSearch < ApplicationRecord
+class UserSearch
   
   attr_accessor :search_name, :search_age
 
-  def initialize(search_name:, search_age:)
-    @search_name = search_name
-    @search_age = search_age
+  def initialize(users_data)
+    @search_name = users_data["search_name"]
+    @search_age = users_data["search_age"]
   end
 
   def execute
